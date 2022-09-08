@@ -1,8 +1,8 @@
 #include <stdio.h>
-/*
- * main - Serves as an entry to the program
+/**
+ *main- Serves as an entry to the program
  *
- * return 0:this program should return 0 unless error
+ *Return:this program should return 0 unless error
  *
  */
 int main(void)
