@@ -1,6 +1,6 @@
 #include <stdio.h>
 /**
- *main - serves as the entry point to the program
+ *main - prints outs a combination of single digit numbers in ascending order
  *
  *Return:0 unless error
  *
@@ -9,17 +9,15 @@ int main(void)
 {
 	int i;
 
-	for (i = 48; i < 58; i++)
+	for (i = 0;, i < 10; i++)
 	{
-		putchar (i);
-	       	{
-		if (i != 57);
-		{
-			putchar (',');
-			putchar (' ');
-		}
-		}
-	}	
-	putchar('\n');
+		putchar ((i % 10) + '0');
+		if (((i % 10) + '0') == '9')
+			break;
+
+		putchar (',');
+		putchar (' ');
+	}
+	putchar ('\n');
 	return (0);
 }
