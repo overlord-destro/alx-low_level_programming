@@ -1,5 +1,4 @@
 #include <stdio.h>
-#include "main.h"
 /**
  *print_to_98 - prints for given natural number to 98
  *
