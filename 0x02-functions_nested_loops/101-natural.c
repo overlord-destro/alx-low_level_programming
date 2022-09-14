@@ -7,7 +7,7 @@
 */
 int main(void)
 {
-	int charray[1024], int i, int k, int sum = 0;
+	int charray[1024], i, k, sum = 0;
 
 	for (i = 0; i < 1025; i++)
 	{
