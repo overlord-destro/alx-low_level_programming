@@ -6,7 +6,7 @@
 *
 *@b: character to also be multiplied
 *
-*Return: 1 if succes 0 otherwise
+*Return: result
 *
 */
 int mul(int a, int b)
