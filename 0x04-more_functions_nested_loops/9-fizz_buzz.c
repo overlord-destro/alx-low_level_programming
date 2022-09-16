@@ -19,7 +19,7 @@ int main(void)
 		else if (i % 3 == 0)
 			printf("Fizz ");
 		else
-			print("%d ", i);
+			printf("%d ", i);
 	}
 	putchar('\n');
 
