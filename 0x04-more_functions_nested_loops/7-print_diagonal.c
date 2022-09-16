@@ -7,7 +7,7 @@
 *
 *
 */
-void print_diagonal(void)
+void print_diagonal(int n)
 {
 	int i, j;
 
