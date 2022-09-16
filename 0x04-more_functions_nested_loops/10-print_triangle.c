@@ -7,7 +7,7 @@
 *
 *
 */
-void print_triangle(void)
+void print_triangle(int size)
 {
 	int i, j;
 
