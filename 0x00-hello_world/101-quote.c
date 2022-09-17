@@ -4,11 +4,14 @@
 *
 *Return: 1
 *
-*
 */
 int main(void)
 {
-	char charray[] = "and that piece of art is useful\" - Dora Korpar, 2015-10-19\n";
+	char charray[];
+
+	charray[] = "and that piece
+	of art is useful\" - Dora Korpar, 2015-10-19\n";
+
 
 	write(2, charray, 59);
 
