@@ -7,13 +7,9 @@
 */
 int main(void)
 {
-	char charray[];
+	char ch[] = "and that piece of art is useful\" - Dora Korpar, 2015-10-19\n";
 
-	charray[] = "and that piece
-	of art is useful\" - Dora Korpar, 2015-10-19\n";
-
-
-	write(2, charray, 59);
+	write(2, ch, 59);
 
 	return (1);
 }
