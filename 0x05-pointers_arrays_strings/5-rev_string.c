@@ -18,9 +18,9 @@ void rev_string(char *s)
 	}
 	str = s;
 
-	for (a = 0; a < (count - 1); i++)
+	for (a = 0; a < (count - 1); a++)
 	{
-		for (b = i + 1; b > 0; b--)
+		for (b = a + 1; b > 0; b--)
 		{
 			hold = *(str + b);
 			*(str + b) = *(str + (b - 1));
