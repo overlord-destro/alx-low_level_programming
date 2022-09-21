@@ -16,7 +16,7 @@ void jack_bauer(void)
 			{
 				for (l = 48; l <= 57; l++)
 				{
-					if (i == 50 && j == 51 && k == 53 && l > 57)
+					if (i >= 50 && j >= 51 && k >= 53 && l >= 57)
 						break;
 					_putchar(i);
 					_putchar(j);
