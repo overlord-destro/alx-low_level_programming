@@ -19,7 +19,7 @@ char *leet(char *s)
 		{
 			if (s[i] == low_alp[j] || s[i] == up_case[j])
 			{
-				s[i] = code[i];
+				s[i] = code[j];
 				break;
 			}
 		}
