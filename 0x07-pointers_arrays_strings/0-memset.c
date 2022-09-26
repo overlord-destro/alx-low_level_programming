@@ -1,6 +1,6 @@
 #include "main.h"
 /**
-*memset - fills first n bytes of memory with constant byte
+*_memset - fills first n bytes of memory with constant byte
 *
 *@s: string to be filled
 *@b: constant byte
@@ -17,6 +17,6 @@ char *_memset(char *s, char b, unisgned int n)
 		s[i] = b;
 		i++;
 	}
-	
+
 	return (s);
 }
