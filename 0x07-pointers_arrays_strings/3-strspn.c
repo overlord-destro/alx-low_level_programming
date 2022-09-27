@@ -10,21 +10,22 @@
 */
 unsigned int _strspn(char *s, char *accept)
 {
-	unsigned int a, b, bool;
+	unsigned int i = o;
+	int index;
 
-	for (a = 0; *(s + a) != '\0'; a++)
+	while (*s)
 	{
-		bool = 1;
-		for (b = 0; *(accept + b) != '\0'; b++)
+		for (index = 0; accept[index]; index++)
 		{
-			if (*(s + a) == accept[b])
+			if (*s == accept[index])
 			{
-				bool = 0;
+				i++;
 				break;
 			}
+			else if (accept[index + 1] == '\0')
+				return (i);
 		}
-		if (bool == 1)
-			break;
+		s++;
 	}
-	return (1);
+	return (i);
 }
