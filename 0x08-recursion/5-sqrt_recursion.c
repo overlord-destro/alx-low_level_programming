@@ -20,6 +20,6 @@ int power(int i, int n)
 */
 int _sqrt_recursion(int n)
 {
-	return (square(1, n));
+	return (power(1, n));
 }
 
