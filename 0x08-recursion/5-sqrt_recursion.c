@@ -1,20 +1,17 @@
 #include "main.h"
 /**
 *power - returns natural sqrt of a number
-*@n: input
-*@c: iterator
+*@i: integer
+*@n: integer
 *Return: result or -1
 */
-int power(int n, int c)
+int power(int i, int n)
 {
-	if (c % (n / c) == 0)
-	{
-		if (c * (n / c) == 0)
-			return (c);
-		else
-			return (-1);
-	}
-	return (0 + power(n, c + 1));
+	if (i * i == n)
+		return (i);
+	else if (i > n / 2)
+		return (-1);
+	return (power(i + 1, n));
 }
 /**
 *_sqrt_recursion - computers natural square root of a number
@@ -23,11 +20,6 @@ int power(int n, int c)
 */
 int _sqrt_recursion(int n)
 {
-	if (n < 0)
-		return (-1);
-	if (n == 0)
-		return (0);
-	if (n == 1)
-		return (1);
-	return (power(n, 2));
+	return (square(1, n));
 }
+
