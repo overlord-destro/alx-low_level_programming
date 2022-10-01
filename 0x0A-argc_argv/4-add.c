@@ -25,6 +25,6 @@ int main(int argc, char *argv[])
 			}
 		}
 	}
-	print("%d\n", add);
+	printf("%d\n", add);
 	return (0);
 }
