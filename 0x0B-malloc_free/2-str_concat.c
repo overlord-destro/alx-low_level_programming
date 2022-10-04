@@ -9,7 +9,7 @@
 char *str_concat(char *s1, char *s2)
 {
 	char *arr;
-	int i = 0, j = 0, k = 0, l = 0;
+	int i = 0, j = 0, k = 0, l;
 
 	while (*s1)
 		i++;
@@ -36,11 +36,12 @@ char *str_concat(char *s1, char *s2)
 		arr[k] = s1[k];
 		k++;
 	}
-	while (k < i + j)
+	l = j;
+	while (j < l)
 	{
-		arr[k] = s2[l];
+		arr[k] = s2[j];
 		k++;
-		l++;
+		j++;
 	}
 	return (arr);
 }
