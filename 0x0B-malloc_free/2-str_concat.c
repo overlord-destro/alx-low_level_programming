@@ -9,13 +9,13 @@
 char *str_concat(char *s1, char *s2)
 {
 	char *arr;
-	int i = 0, j = 0, k = 0, l;
+	int i, j, k = 0, l;
 
-	while (*s1)
-		i++;
+	for (i = 0; s1[i] != 0; i++)
+		;
 
-	while (*s2)
-		j++;
+	for (j = 0; s2[j] != 0; j++)
+		;
 
 	if (s1 == NULL)
 		s1 = "";
