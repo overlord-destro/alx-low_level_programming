@@ -31,17 +31,10 @@ char *str_concat(char *s1, char *s2)
 		return (NULL);
 	}
 
-	while (k < i)
-	{
+	for (k = 0; k < i; k++);
 		arr[k] = s1[k];
-		k++;
-	}
+
 	l = j;
-	for (j = 0; j <= l; k++, j++)
-	{
+	for (j = 0; j <= l; k++,, j++)
 		arr[k] = s2[j];
-		k++;
-		j++;
-	}
 	return (arr);
-}
