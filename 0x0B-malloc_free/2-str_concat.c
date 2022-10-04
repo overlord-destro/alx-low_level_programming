@@ -37,7 +37,7 @@ char *str_concat(char *s1, char *s2)
 		k++;
 	}
 	l = j;
-	while (j <= l)
+	for (j = 0; j <= l; k++, j++)
 	{
 		arr[k] = s2[j];
 		k++;
