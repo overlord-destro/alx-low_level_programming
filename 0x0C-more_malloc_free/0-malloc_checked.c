@@ -11,7 +11,7 @@ void *malloc_checked(unsigned int b)
 {
 	char *arr;
 
-	arr = malloc(sizeof(b) + 1);
+	arr = malloc(sizeof(int) * b);
 	if (arr == NULL)
 		exit(98);
 
