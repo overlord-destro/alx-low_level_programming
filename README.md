@@ -1,1 +1,1 @@
-This repository contains directories on low level programming with the alx school
+This directory contains files on using the preprocessor in C
