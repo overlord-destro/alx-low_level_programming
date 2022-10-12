@@ -1,4 +1,5 @@
 #include "main.h"
+#include <stddef.h>
 /**
 *int_index - checks for an the first occurence of an integer in an array
 *@array: array to be checked
@@ -11,7 +12,7 @@ int int_index(int *array, int size, int (*cmp)(int))
 	if (size <= 0)
 		return (-1);
 
-	int i, r;
+	int i, c;
 
 	for (i = 0; i < size; i++)
 	{
