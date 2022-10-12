@@ -1,5 +1,4 @@
-#include "main.h"
-#include <stddef.h>
+#include "function_pointers.h"
 /**
 *int_index - checks for an the first occurence of an integer in an array
 *@array: array to be checked
@@ -14,11 +13,14 @@ int int_index(int *array, int size, int (*cmp)(int))
 
 	int i, c;
 
-	for (i = 0; i < size; i++)
+	if (array && cmp)
 	{
-		c = cmp(array[i]);
-		if (c != 0)
-			return (i);
+		for (i = 0; i < size; i++)
+		{
+			c = cmp(array[i]);
+			if (c != 0)
+				return (i);
+		}
 	}
 	return (-1);
 }
