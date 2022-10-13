@@ -9,15 +9,17 @@ void print_strings(const char *separator, const unsigned int n, ...)
 {
 	va_list arr;
 	unsigned int i;
+	char *str;
 
 	va_start(arr, n);
 
 	for (i = 0; i < n; i++)
 	{
-		if (va_arg(arr, char *))
-			printf("%s", va_arg(arr, char *));
+		str = va_arg(arr, char *);
+		if (str)
+			printf("%s", str);
 		else
-			printf("nil");
+			printf("(nil)");
 		if (i == (n - 1))
 			continue;
 		if (separator)
