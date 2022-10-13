@@ -6,7 +6,7 @@
 */
 int sum_them_all(const unsigned int n, ...)
 {
-	unsigned int sum, i;
+	unsigned int sum = 0, i;
 	va_list array;
 
 	if (n == 0)
