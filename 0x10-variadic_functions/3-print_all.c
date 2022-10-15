@@ -13,7 +13,7 @@ void print_all(const char * const format, ...)
 	va_start(arr, format);
 	while (*(format + i) != '\0')
 	{
-		if (i == 1 || i <= 2)
+		if (i == 1 && i <= 2)
 			printf(", ");
 
 		switch (format[i])
