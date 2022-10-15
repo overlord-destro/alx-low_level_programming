@@ -1,4 +1,5 @@
 #include "variadic_functions.h"
+#include <stdio.h>
 /**
 *print_all - prints anything
 *@format: string containing format of text to be printed*
@@ -27,10 +28,10 @@ void print_all(const char * const format, ...)
 				printf("%f", va_arg(arr, double));
 				break;
 			case 's':
-				str = va_arg(arr, char *);
-				if (!str)
+				s = va_arg(arr, char *);
+				if (!s)
 					printf("(nil)");
-				printf("%s", str);
+				printf("%s", s);
 				break;
 		}
 		i++;
