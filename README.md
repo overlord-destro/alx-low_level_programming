@@ -1,1 +1,1 @@
-This directory contains files on using the preprocessor in C
+This directory contains files on using singly linked lists in C
