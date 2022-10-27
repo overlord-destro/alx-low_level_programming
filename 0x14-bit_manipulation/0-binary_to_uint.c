@@ -6,23 +6,22 @@
 */
 unsigned int binary_to_uint(const char *b)
 {
-	int i;
+	int len, tempbase;
 	unsigned int result = 0;
 
 	if (!b)
 		return (0);
 
-	while (b[i] != '\0')
+	for (len = 0; b[len] != '\0'; len++)
+		;
+
+	for (len--, tempbase = 1; len >= 0; len--, tempbase *= 2)
 	{
-		if (b[i] != '0' && b[i] != '1')
+		if (b[len] != '0' && b[len] != '1')
 			return (0);
-		i++;
-	}
-	for (i = 0; b[i] != '\0'; i++)
-	{
-		result <<= 1;
-		if (b[i] == '1')
-			result += 1;
+
+		if (b[len] & 1)
+			result += tempbase;
 	}
 
 	return (result);
