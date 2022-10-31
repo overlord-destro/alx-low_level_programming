@@ -9,12 +9,11 @@ ssize_t read_textfile(const char *filename, size_t letters)
 {
 	int fd, red;
 	char *buffer;
-	ssize_t; total;
 
 	if (filename == NULL)
 		return (0);
 
-	fd = open(filename, 0_RDONLY);
+	fd = open(filename, O_RDONLY);
 	if (fd == -1)
 		return (0);
 
@@ -25,5 +24,5 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	red = read(fd, buffer, letters);
 	write(STDOUT_FILENO, buffer, red);
 
-	return (wrt);
+	return (red);
 }
