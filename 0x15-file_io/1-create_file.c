@@ -15,21 +15,16 @@ int create_file(const char *filename, char *text_content)
 	if (text_content == NULL)
 		text_content = "";
 
-	fd = open(filename, O_CREAT | O_WRONLY | 0_TRUNC, 0600);
+	fd = open(filename, O_CREAT | O_WRONLY | O_TRUNC, 0600);
 
 	for (len = 0; text_content[len] != '\0'; len++)
 		;
-
-	wrt = malloc((sizeof(char) * len) + 1);
-	if (wrt == NULL)
-		return (-1);
 
 	wrt = write(fd, text_content, len);
 	if (wrt == -1)
 		return (-1);
 
 	close(fd);
-	free(wrt);
 
 	return (1);
 }
