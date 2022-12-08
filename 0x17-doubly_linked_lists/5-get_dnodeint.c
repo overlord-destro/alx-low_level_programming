@@ -1,6 +1,6 @@
 #include "lists.h"
 /**
-*get_dnodeint_at_index: gets node at specified index
+*get_dnodeint_at_index - gets node at specified index
 *@head: head node
 *@index: index of node
 *Return: returns node
