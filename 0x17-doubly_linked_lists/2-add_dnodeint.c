@@ -7,27 +7,19 @@
 */
 dlistint_t *add_dnodeint(dlistint_t **head, const int n)
 {
-	dlistint_t *new, *temphead;
+	dlistint_t *new;
 
 	new = malloc(sizeof(dlistint_t));
 	if (new == NULL)
 		return (NULL);
 
 	new->n = n;
-	temphead = *head;
-	/*checking if list is empty*/
-	if (head == NULL)
+	new->prev = NULL;
+	if (*head)
 	{
-		new->next = NULL;
-		new->prev = NULL;
+		new->next = *head;
+		(*head)->prev = new;
 	}
-	else
-	{
-		new->next = temphead;
-		temphead->prev = new;
-		new->prev = NULL;
-	}
-
 	*head = new;
 
 	return (*head);
