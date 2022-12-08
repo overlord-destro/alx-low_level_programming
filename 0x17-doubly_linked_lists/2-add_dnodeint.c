@@ -1,6 +1,6 @@
 #include "lists.h"
 /**
-*add_nodeint - adds node to beginning of list
+*add_dnodeint - adds node to beginning of list
 *@head: head node
 *@n: data to be added
 *Return: pointer to struct
