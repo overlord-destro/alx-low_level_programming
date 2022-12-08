@@ -15,17 +15,17 @@ dlistint_t *add_dnodeint(dlistint_t **head, const int n)
 
 	new->n = n;
 	new->prev = NULL;
+	temphead = *head;
 	/*checking if list is empty*/
 	if (head == NULL)
 	{
 		new->next = NULL;
-		*head = new;
-		return (*head);
 	}
-		
-	temphead = *head;
-	new->next = temphead;
-	temphead->prev = new;
+	else
+	{	
+		new->next = temphead;
+		temphead->prev = new;
+	}
 
 	*head = new;
 
