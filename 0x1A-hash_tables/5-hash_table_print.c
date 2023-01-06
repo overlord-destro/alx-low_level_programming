@@ -6,9 +6,9 @@
 */
 void hash_table_print(const hash_table_t *ht)
 {
-	unsigned long int i = 0;
+	unsigned int i = 0
+	unsigned long int idx = 0;
 	hash_node_t *temp;
-	char *delim;
 
 	if (ht == NULL)
 		return;
@@ -16,16 +16,15 @@ void hash_table_print(const hash_table_t *ht)
 	printf("{");
 	delim = "";
 
-	printf("{");
-	delim = "";
-
-	for (; i < ht->size; i++)
+	for (; idx < ht->size; idx++)
 	{
-		temp = ht->array[i];
+		temp = ht->array[idx];
 		while (temp != NULL)
 		{
-			printf("%s'%s': '%s'", delim, temp->key, temp->value);
-			delim = ", ";
+			if (i == 1)
+				printf(", ");
+			printf("'%s': '%s'", temp->key, temp->value);
+			i = 1;
 			temp = temp->next;
 		}
 	}
